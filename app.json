@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/testimg/testimg",
+    "pages/store/store",
+    "pages/selectCity/selectCity",
+    "pages/storeInfo/storeInfo"
+  ],
+  "window": {
+    "navigationStyle": "default",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ViolaDemo",
+    "navigationBarTextStyle": "black"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxd4ce61a2d6a1afab",
+    "wxd4ce61a2d6a1afab",
+    "wx240696d46c9671d7"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序门店展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

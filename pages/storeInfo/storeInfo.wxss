@@ -1,0 +1,9 @@
+/* pages/storeInfo/storeInfo.wxss */
+.content {
+  width: 100%;
+  height: calc(100% - 70rpx);
+  position: relative;
+  /* background-image: url(https://clarins.beats-digital.com/wxapp/images/index/banner.jpg?sign=ffe7d830ded99a0ac3f45fc737c3840e&t=1550230307); */
+  background-size: cover;
+  background-color: #fefefe;
+}

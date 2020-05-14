@@ -1,0 +1,54 @@
+<!-- 顶级view的class name默认article -->
+<view class="article">
+  <!----section begin----->
+  <!-- commonTop s-->
+  <commonTop has-userinfo="{{hasUserInfo}}" avatar-url="{{userInfo.avatarUrl}}" nick-name="{{userInfo.nickName}}"></commonTop>
+  <!-- commonTop e-->
+  <view class='content'>
+    <!-- 滚动区域 -->
+    <scroll-view class='pageScroll' scroll-y="true">
+      <!-- 种草分享 -->
+      <view class='grassBox'>
+        <!-- 列表 -->
+        <view class='list'>
+          <view class='listItem listItem-{{index}}' hover-stop-propagation='true' wx:for="{{_IndexArticle}}" wx:key="*this.Cover">
+            <view class='listItem-top' id="{{item.ID}}" bindtap='listItemClick'>
+              <image src='{{item.show? item.Cover : item.def}}' mode='aspectFill' class='{{item.show? "active" : ""}}'></image>
+            </view>
+            <view class='listItem-bottom'>
+              <view class='top'>
+                <view class='authorinfo' id="{{item.ID}}" bindtap='listItemClick'>
+                  <image class='avatarUrl' src="{{item.Photo}}" background-size="cover"></image>
+                  <view class='nickName'>{{item.Author}}</view>
+                </view>
+                <view class='userCollection {{item.IsCollect == 1?"active":""}}' catchtap='{{item.IsCollect == 1?"":"userCollectionClick"}}' data-id="{{item.ID}}" data-index="{{index}}"></view>
+              </view>
+              <view class='body'>
+                <view class='listItemTitle' id="{{item.ID}}" bindtap='listItemClick'>{{item.Headline}}</view>
+                <view class='listItemTag'>
+                  <text class='tag' wx:for="{{item.Classes1}}" wx:key="unique6" data-tag="{{item}}" catchtap='listItemTagClick'>{{item}}</text>
+                </view>
+              </view>
+              <view class='footer'>
+                <view class='userLike {{item.IsLike == 1?"active":""}}' data-index="{{index}}" catchtap='{{item.IsLike == 1?"":"userLikeClick"}}' id="{{item.ID}}">
+                  <view class='icon'></view>
+                  <view class='num'>{{item.CountLike}}</view>
+                </view>
+                <view class='userRead'>
+                  <view class='icon'></view>
+                  <view class='num'>{{item.Pageview}}</view>
+                </view>
+                <view>
+                  <button class='userShare' open-type="share" hover-class="none" id="{{item.ID}}" data-sharetitle="{{item.Headline}}" data-shareimg="{{item.Cover}}"></button>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!----section end----->
+
+</view>
+<!----article end----->

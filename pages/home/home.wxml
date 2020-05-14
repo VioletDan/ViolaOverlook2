@@ -1,0 +1,17 @@
+
+<!-- 顶级view的class name默认article -->
+<view class="article" catchtouchmove="true">
+  <!----section begin----->
+  <!-- commonTop s-->
+  <commonTop has-userinfo="{{hasUserInfo}}" avatar-url="{{userInfo.avatarUrl}}" nick-name="{{userInfo.nickName}}"></commonTop>
+  <!-- commonTop e-->
+  <view class='content'>
+    我是内页
+  </view>
+  <!----section end----->
+  <!----bgm button----->
+  <view class='bgmBtn {{bgmPlay}}' catchtap='bgmClick' wx:if='{{bgmBtn}}'>
+    <image src='/images/common/bgm_on.png'></image>
+  </view>
+</view>
+<!----article end----->

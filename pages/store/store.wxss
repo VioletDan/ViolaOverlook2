@@ -1,0 +1,173 @@
+/**标准16:9*/
+
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+
+.topBox {
+  padding: 10rpx 30rpx 10rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.topBox .currentPos {
+  max-width: 550rpx;
+}
+
+.topBox .currentPos .van-cell:after {
+  border-bottom: none;
+}
+
+.topBox .search {
+  width: 140rpx;
+  background-color: #f7f7f7;
+  position: relative;
+}
+.topBox .search::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.topBox .van-search {
+  padding: 0;
+}
+
+.topBox .van-search .van-search__content {
+  border-radius: 30rpx;
+}
+
+.storeBox {
+  height: calc(100% - 608rpx);
+  padding: 50rpx 30rpx;
+}
+
+.storeBox scroll-view {
+  height: 100%;
+}
+
+.storeBox scroll-view .item {
+  padding: 25rpx 35rpx;
+  background: #fff;
+  border-radius: 15rpx;
+  overflow: hidden;
+  min-height: 240rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25rpx;
+}
+
+.storeBox scroll-view .item>.left {
+  width: 78%;
+  float: left;
+  height: 100%;
+}
+.storeBox scroll-view .item>.left .item-title{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.storeBox scroll-view .item>.left .item-distance{
+  font-size: 22rpx;
+  color: #787878;
+  margin-top: 15rpx;
+}
+.storeBox scroll-view .item>.left .item-adress,.storeBox scroll-view .item>.left .item-time{
+  font-size: 22rpx;
+  color: #a1a1a1;
+  margin-top: 8rpx;
+}
+.storeBox scroll-view .item>.right {
+  width: calc(100% - 78%);
+  float: right;
+  height: 160rpx;
+  border-left: 2rpx solid #efefef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* popupCon */
+.popupCon .van-popup{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 10;
+}
+.popupCon .resultBox{
+  padding: 0 32rpx;
+}
+.popupCon .resultBox .item{
+  padding: 30rpx 0;
+}
+.popupCon .resultBox .title{
+  font-size: 30rpx;
+  color: #000;
+  margin-bottom: 12rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.popupCon .resultBox .adress{
+  font-size: 20rpx;
+  color: #838383;
+  margin-top: 12rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.popupCon .resultBox .noResult{
+  padding: 30rpx 0;
+  font-size: 30rpx;
+  color: #000;
+}
+
+/**
+   css media 适配
+*/
+
+/** iphone系列 */
+
+@media screen and (width:320px), screen and (width:375px), screen and (width:414px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓系列 */
+
+@media screen and (width:360px), screen and (width:393px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓 15:9 */
+
+@media screen and (width:360px) and (max-height:540px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓 18:9 */
+
+@media screen and (width:360px) and (min-height:600px),
+       screen and (width:412px) and (min-height:680px),
+       screen and (width:393px) {
+  .cssMedia {
+  }
+}
+
+/** iphoneX */
+
+@media screen and (width:375px) and (min-height:724px),
+       screen and (width:414px) and (min-height:808px) {
+  .cssMedia {
+  }
+}

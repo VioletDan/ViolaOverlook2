@@ -1,0 +1,49 @@
+/**标准16:9*/
+
+.content {
+  width: 100%;
+  height: calc(100% - 70rpx);
+  background-color: #f9f9f9;
+}
+
+/**
+   css media 适配
+*/
+
+/** iphone系列 */
+
+@media screen and (width:320px), screen and (width:375px), screen and (width:414px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓系列 */
+
+@media screen and (width:360px), screen and (width:393px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓 15:9 */
+
+@media screen and (width:360px) and (max-height:540px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓 18:9 */
+
+@media screen and (width:360px) and (min-height:600px),
+       screen and (width:412px) and (min-height:680px),
+       screen and (width:393px) {
+  .cssMedia {
+  }
+}
+
+/** iphoneX */
+
+@media screen and (width:375px) and (min-height:724px),
+       screen and (width:414px) and (min-height:808px) {
+  .cssMedia {
+  }
+}

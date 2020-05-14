@@ -1,0 +1,10 @@
+<!--components/commonTop.wxml-->
+<view class='top'>
+  <view class='logo'></view>
+  <view class='right'>
+    <view class="userinfo" wx:if="{{hasUserinfo}}" style='text-align:center' catchtap='userinfoClick'>
+      <image src="{{avatarUrl}}" background-size="cover" class='avatar'></image>
+      <text class='text'>{{nickName}}</text>
+    </view>
+  </view>
+</view>

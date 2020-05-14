@@ -1,0 +1,16 @@
+<!-- 顶级view的class name默认article -->
+<view class="article" catchtouchmove="true">
+  <!----section begin----->
+  <!-- commonTop s-->
+  <commonTop has-userinfo="{{hasUserInfo}}" avatar-url="{{userInfo.avatarUrl}}" nick-name="{{userInfo.nickName}}"></commonTop>
+  <!-- commonTop e-->
+  <view class='content'>
+    <image class='img' mode='aspectFill' 
+    src='https://6f76-overlook-79ced3-1258404297.tcb.qcloud.la/pic1.jpg?sign=6e5d2e80d88c602baedf40bfee45eb1d&t=1565061260'></image>
+    <button class='getUserInfo' open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      AAAABBB
+    </button>
+  </view>
+  <!----section end----->
+</view>
+<!----article end----->

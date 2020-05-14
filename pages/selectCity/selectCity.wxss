@@ -1,0 +1,66 @@
+/**标准16:9*/
+
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.topBox{
+  padding: 30rpx 18rpx 30rpx 30rpx;
+  border-bottom: 3rpx solid #f6f6f6;
+  font-size: 28rpx;
+}
+.content .treeSelect .van-tree-select{
+  height: calc(100% - 120rpx)!important;
+}
+.content .treeSelect .van-tree-select__content {
+   height: calc(100% - 60rpx)!important;
+}
+.content .treeSelect .mainItem-class,.content .treeSelect .contentItem-class {
+  font-size: 28rpx!important;
+  color: #333;
+}
+.content .treeSelect .contentItem-class{
+  font-weight: normal!important;
+}
+/**
+   css media 适配
+*/
+
+/** iphone系列 */
+
+@media screen and (width:320px), screen and (width:375px), screen and (width:414px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓系列 */
+
+@media screen and (width:360px), screen and (width:393px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓 15:9 */
+
+@media screen and (width:360px) and (max-height:540px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓 18:9 */
+
+@media screen and (width:360px) and (min-height:600px),
+       screen and (width:412px) and (min-height:680px),
+       screen and (width:393px) {
+  .cssMedia {
+  }
+}
+
+/** iphoneX */
+
+@media screen and (width:375px) and (min-height:724px),
+       screen and (width:414px) and (min-height:808px) {
+  .cssMedia {
+  }
+}

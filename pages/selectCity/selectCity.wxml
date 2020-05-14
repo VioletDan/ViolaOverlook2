@@ -1,0 +1,11 @@
+<!-- 顶级view的class name默认article -->
+<view class="article">
+  <!----section begin----->
+  <view class='content'>
+    <view class='topBox'>已选择 {{topTitle1}} {{topTitle2}}</view>
+    <van-tree-select class="treeSelect" items="{{ items }}" main-active-index="{{ mainActiveIndex }}" active-id="{{ activeId }}" bind:click-nav="onClickNav" bind:click-item="onClickItem" main-item-class="mainItem-class" content-item-class="contentItem-class"
+    />
+  </view>
+  <!----section end----->
+</view>
+<!----article end----->

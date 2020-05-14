@@ -1,0 +1,120 @@
+/**标准16:9*/
+@import '../../common/css/stylesheet.wxss';
+/* content */
+
+.content {
+  width: 100%;
+  height: calc(100% - 70rpx);
+  position: relative;
+  /* background-image: url(https://clarins.beats-digital.com/wxapp/images/index/banner.jpg?sign=ffe7d830ded99a0ac3f45fc737c3840e&t=1550230307); */
+  background-size: cover;
+  background-color: #fefefe;
+}
+.getUserInfo {
+  width: 100%;
+  height: 113rpx;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  -webkit-mask-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 60%);
+  -webkit-mask-size: 200% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 120% 0;
+  -webkit-animation: masked-animation 1.5s 1 linear forwards;
+  /* animation-delay: 1s; */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  /* font-family: 'DIN Condensed'; */
+  font-family: 'DIN'
+}
+
+.getUserInfo::after {
+  border: none;
+  border-radius: 0;
+}
+
+.getUserInfo>image {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes text_fadeIn3 {
+    0%{
+        transform: translateY(2.5rem);
+    }
+    100%{
+        transform: translateX(0rem);
+    }
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@-webkit-keyframes masked-animation {
+  0% {
+    -webkit-mask-position: 120% 0;
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-mask-position: 0 0;
+    opacity: 1;
+  }
+}
+.content .img{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+/**
+   css media 适配
+*/
+
+/** iphone系列 */
+
+@media screen and (width:320px), screen and (width:375px), screen and (width:414px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓系列 */
+
+@media screen and (width:360px), screen and (width:393px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓 15:9 */
+
+@media screen and (width:360px) and (max-height:540px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓 18:9 */
+
+@media screen and (width:360px) and (min-height:600px),
+       screen and (width:412px) and (min-height:680px),
+       screen and (width:393px) {
+  .cssMedia {
+  }
+}
+
+/** iphoneX */
+
+@media screen and (width:375px) and (min-height:724px),
+       screen and (width:414px) and (min-height:808px) {
+  .cssMedia {
+  }
+}

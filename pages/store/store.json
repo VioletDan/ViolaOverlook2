@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "commonTop": "/components/commonTop/commonTop",
+    "van-button": "/path/dist/button/index",
+    "van-cell": "/path/dist/cell/index",
+    "van-icon": "/path/dist/icon/index",
+    "van-search": "/path/dist/search/index",
+    "van-popup": "/path/dist/popup/index"
+  },
+  "navigationBarTitleText": "选择门店"
+}

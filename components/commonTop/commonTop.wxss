@@ -1,0 +1,74 @@
+/* components/commonTop.wxss */
+.top {
+  width: 100%;
+  height: 70rpx;
+  /* background-color: #cb0937; */
+  padding: 0 22rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* overflow: hidden; */
+  z-index: 999;
+}
+
+.logo {
+  /* width: auto;
+  height: 100%;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; */
+  width: 186rpx;
+  height: 22rpx;
+  /* background-image: url(https://clarins.beats-digital.com/wxapp/images/index/logo.png?sign=1730a85d68a138d4446ff4affc256728&t=1550229554); */
+}
+
+.userinfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.userinfo .avatar {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  margin-right: 8rpx;
+  transform: scale(0.8);
+}
+
+.userinfo .text {
+  font-size: 24rpx;
+  color: #000;
+}
+.right{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.letter{
+  width: 54rpx;
+  height: 43rpx;
+  position: relative;
+  margin-left: 20rpx;
+}
+.letter .letterIcon{
+  width: 100%;
+  height: 100%;
+}
+.letter .letterNum{
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10rpx;
+  right: -14rpx;
+  font-size: 25rpx;
+  color: #cb0937;
+  font-weight: bold;
+}

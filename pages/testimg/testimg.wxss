@@ -1,0 +1,642 @@
+/**标准16:9*/
+.article { }
+.content {
+  width: 100%;
+  height: calc(100% - 70rpx);
+  background-color: #f9f9f9;
+  /* overflow: hidden; */
+  /* overflow-y: scroll; */
+  -webkit-overflow-scrolling: touch;
+}
+.move_cont{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+movable-area{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+movable-view{
+    width:121rpx;
+    height:128rpx;
+    z-index: 11;
+
+}
+.icon_write{
+    width:121rpx;
+    height:128rpx;
+    position: absolute;
+
+}
+.seacrchBox {
+  width: 706rpx;
+  overflow: hidden;
+  margin: 0 auto;
+  height: auto;
+  border-top: 1rpx solid transparent;
+}
+
+.seacrchBox.sActive {
+  height: 100%;
+}
+
+/* ------------------------------------------------------searchInput */
+
+.seacrchBox .searchInput {
+  width: 100%;
+  height: 53rpx;
+  border: 1rpx solid #cb0937;
+  border-radius: 23rpx;
+  position: relative;
+  margin-top: 19rpx;
+}
+
+.seacrchBox .searchInput input.weui-input {
+  width: 80%;
+  height: 100%;
+  font-size: 28rpx;
+  padding: 0 22rpx;
+}
+
+.iconSearch {
+  width: 61rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -16rpx;
+  right: 30rpx;
+  z-index: 10;
+  background-image: url(https://clarins.beats-digital.com/wxapp/images/grassSharing/icon_search.png?sign=c59d2f414254389e53a98b7fe83baeaf&t=15506442990);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-origin: padding-box;
+  background-clip: padding-box;
+  padding: 0;
+  border-radius: 0;
+}
+
+button[type=primary] {
+  background-color: transparent;
+}
+
+.iconSearch:after {
+  border-radius: 0;
+  border: none;
+  padding: 0;
+}
+
+.searchKeywords {
+  width: 100%;
+  height: auto;
+  background-color: #f9f9f9;
+  /* border-top: 1rpx solid transparent; */
+  text-align: center;
+  position: relative;
+}
+
+/* ------------------------------------------------------classWords */
+
+.searchKeywords .classWords {
+  font-size: 28rpx;
+  color: #a9a9a9;
+}
+
+.searchKeywords .classWords .txt {
+  padding: 15rpx;
+  display: inline-block;
+  /* margin-left: 5rpx; */
+  position: relative;
+}
+
+.searchKeywords .classWords .txt::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  content: '|';
+}
+
+.searchKeywords .classWords .txt:last-child::after {
+  content: '';
+}
+
+.searchKeywords .classWords .txt.active {
+  background-color: #fff;
+  border-top-left-radius: 8rpx;
+  border-top-right-radius: 8rpx;
+}
+
+.searchKeywords .classWords .more {
+  position: relative;
+  text-align: left;
+  padding: 10rpx 20rpx 15rpx 20rpx;
+  width: 120rpx;
+}
+
+.searchKeywords .classWords .more::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8rpx;
+  content: '';
+  height: 0px;
+  width: 0px;
+  border-top: solid 10rpx #a9a9a9;
+  border-left: solid 10rpx rgba(0, 0, 0, 0);
+  border-right: solid 10rpx rgba(0, 0, 0, 0);
+}
+
+/* ------------------------------------------------------searchKeywords classWordsMore */
+
+.searchKeywords .classWordsMore {
+  width: 100%;
+  background-color: #fff;
+  height: 380rpx;
+  -moz-box-shadow: 0px 3px 5px #efefef;
+  -webkit-box-shadow: 0px 3px 5px #efefef;
+  box-shadow: 0px 3px 5px #efefef;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchKeywords .classWordsMore .citem {
+  margin-bottom: 35rpx;
+  width: 100%;
+  padding-left: 52rpx;
+}
+
+.searchKeywords .classWordsMore .citem:last-child {
+  margin-bottom: 0;
+}
+
+.searchKeywords .classWordsMore .citem .citemTitle {
+  color: #cb0937;
+  font-size: 28rpx;
+  padding-left: 12rpx;
+  margin-bottom: 8rpx;
+}
+
+.searchKeywords .classWordsMore .citem .ctxt {
+  color: #a9a9a9;
+  font-size: 28rpx;
+  padding: 0 13rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+.searchKeywords .classWordsMore .citem .ctxt.active{
+  color: #cb0937;
+}
+.searchKeywords .classWordsMore .citem .ctxt::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  content: '|';
+  height: 30rpx;
+}
+
+.searchKeywords .classWordsMore .citem .ctxt:last-child::after {
+  content: "";
+}
+
+/* ------------------------------------------------------s-history */
+
+.s-history .s-historyTitle {
+  font-size: 28rpx;
+  color: #a9a9a9;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.s-history .s-historyTitle .icon-delete {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  height: 32rpx;
+  width: 32rpx;
+  background-image: url(https://clarins.beats-digital.com/wxapp/images/grassSharing/icon-delete.png?sign=cb1357e54c4c1212a309b1460625a67d&t=1550656550);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-origin: padding-box;
+  background-clip: padding-box;
+}
+
+.s-history .stxt {
+  display: inline-block;
+  padding: 0.4rem 0.6rem;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 20rpx 20rpx 0 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 28rpx;
+  color: #333;
+  -moz-border-radius: 10rpx;
+  border-radius: 30rpx;
+  background-color: #f5f5f5;
+}
+
+.s-history .noHistory {
+  width: 100%;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 2;
+  color: #999;
+  margin-top: 20rpx;
+}
+
+.searchKeywords.active {
+  height: 100rpx;
+}
+
+/* ----------------------------------------------noKeywords */
+
+.noKeywords {
+  margin-top: 150rpx;
+  text-align: center;
+}
+
+.noKeywords .txt {
+  font-size: 28rpx;
+  color: #a9a9a9;
+  margin-bottom: 135rpx;
+}
+
+.recommendKeywords .title {
+  font-size: 28rpx;
+  color: #a9a9a9;
+  margin-bottom: 10rpx;
+}
+
+.recommendKeywords .body {
+  font-size: 28rpx;
+  color: #cb0937;
+}
+
+/* -------------------------------------------bannerBox */
+
+.bannerBox {
+  width: 706rpx;
+  margin: 30rpx auto 0;
+}
+.bannerBox .title{
+  width: 100%;
+  height: 34rpx;
+  background-image: url(https://clarins.beats-digital.com/wxapp/images/grassSharing/title3.png?sign=65ea4ff344d2074081d74e697e6ee199&t=1550665981);
+}
+.bannerBox .body{
+  width: 100%;
+  height: 280rpx;
+  position: relative;
+  border-top: 1rpx solid #e9e9ea;
+  border-bottom: 1rpx solid #e9e9ea;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  overflow: hidden;
+}
+.bannerBox .body swiper{
+  height: 100%;
+}
+.bannerBox .body image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bannerBox .info{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 23rpx;
+}
+.bannerBox .info .txt1{
+  color: #333333;
+  font-size: 22rpx;
+}
+.bannerBox .info .txt2{
+  color: #cb0937;
+  font-size: 28rpx;
+  display: inline-block;
+  margin-right: 16rpx;
+}
+.bannerBox .info .btn{
+  width: 180rpx;
+  height: 50rpx;
+  margin: 35rpx auto 0;
+  background-image: url(https://clarins.beats-digital.com/wxapp/images/grassSharing/btn_more.png?sign=f7c74d8a166236c272434a12029698c3&t=1550666715);
+}
+/* -------------------------------------------grassBox */
+
+.grassBox {
+  width: 706rpx;
+  overflow: hidden;
+  margin: 30rpx auto 0;
+}
+.grassBox .title{
+  width: 100%;
+  height: 34rpx;
+  background-image: url(https://clarins.beats-digital.com/wxapp/images/grassSharing/title.png?sign=fc265be104ded2d8031f53714ddca006&t=1550667025);
+}
+.grassBox .formatSwitch{
+  text-align: right;
+}
+.grassBox .formatSwitch .modal{
+  width:33rpx;
+  height: 33rpx;
+  display: inline-block;
+  margin: 20rpx auto 20rpx; 
+}
+.grassBox .formatSwitch .modal1{
+  background-image: url(https://clarins.beats-digital.com/wxapp/images/grassSharing/icon_square.png?sign=bb53a180044f58445fdc82c0253e0a2d&t=1550668675);
+  margin-right: 20rpx;
+}
+.grassBox .formatSwitch .modal1.active{
+  background-image: url(https://clarins.beats-digital.com/wxapp/images/grassSharing/icon_square_d.png?sign=4be60dfbcb2f04b6bbae7a2b3b19e791&t=1550669185);
+}
+.grassBox .formatSwitch .modal2{
+  background-image: url(https://clarins.beats-digital.com/wxapp/images/grassSharing/icon_strip.png?sign=d4014fb3109392ee07dbff48576141b2&t=1550669114);
+}
+.grassBox .formatSwitch .modal2.active{
+  background-image: url(https://clarins.beats-digital.com/wxapp/images/grassSharing/icon_strip_d.png?sign=157218ae2be5eaea8c378d65f03f1c1c&t=1550669210);
+}
+/* -------------------------------------------scrollBox */
+.scrollBox{
+  width: 100%;
+  /* flex: 1; */
+  /* height: 100rpx; */
+}
+.pageScroll{
+  width: 100%;
+  height: 100%;
+  /* height:calc(100% - 170rpx); */
+
+}
+
+/* -------------------------------------------list */
+.list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.list .listItem{
+  display: flex;
+  height: 370rpx;
+  border-left: 1rpx solid #f2f2f2;
+  border-right: 1rpx solid #f2f2f2;
+  border-bottom: 1rpx solid #f2f2f2;
+  border-top: 2rpx solid #f2f2f2;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+  flex-direction: row;
+  margin-bottom: 15rpx;
+  width: 100%;
+}
+
+.list .listItem .listItem-top{
+  width: 420rpx;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+.list .listItem .listItem-top>image{
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+.list .listItem .listItem-top>image.active {
+  opacity: 1;
+}
+.list .listItem .listItem-bottom{
+ background-color: #fff;
+ padding: 0 24rpx;
+ height: 100%;
+ /* width: calc(100%-250rpx); */
+ width: 390rpx;
+}
+.list .listItem .listItem-bottom .top{
+  display: flex;
+  height: 69rpx;
+  border-bottom: 1rpx solid #d3d3d3;
+  justify-content: space-between;
+  align-items: center;
+}
+.list .listItem .listItem-bottom .top .authorinfo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list .listItem .listItem-bottom .authorinfo .avatarUrl{
+  width: 49rpx;
+  height: 49rpx;
+  border-radius: 50%;
+}
+.list .listItem .listItem-bottom .authorinfo .nickName{
+  /* color: #161616; */
+  font-weight:600;
+  font-size: 20rpx;
+  margin-left: 14rpx;
+  max-width: 140rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list .listItem .listItem-bottom .userCollection{
+  width: 33rpx;
+  height: 33rpx;
+  background-image: url(https://clarins.beats-digital.com/wxapp/images/grassSharing/icon_collect.png?sign=738984f103a1659964a6493ab220d99f&t=15508555666);
+}
+.list .listItem .listItem-bottom .userCollection.active{
+  background-image: url(https://clarins.beats-digital.com/wxapp/images/grassSharing/icon_collect_d.png?sign=65791b1975e0c67f2064937c128f928c&t=1550827890);
+}
+.list .listItem .listItem-bottom .body{
+  height: calc(100%-120rpx);
+  width: 100%;
+}
+.list .listItem .listItem-bottom .body .listItemTitle{
+  /* color: #161616; */
+  font-weight:600;
+  font-size: 25rpx;
+  text-align: left;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 14rpx;
+  height: 175rpx;
+  max-height: 175rpx;
+  letter-spacing: 1rpx;
+  line-height: 1.4;
+}
+.list .listItem .listItem-bottom .body .listItemTag{
+  text-align:  center;
+  display: flex;
+  justify-content:  space-between;
+  width: 100%;
+  margin: 0 auto 25rpx;
+}
+.list .listItem .listItem-bottom .body .listItemTag>.tag{
+  width: 86rpx;
+  height: 34rpx;
+  background-color: #cb0937;
+  color: #fff;
+  font-size: 20rpx;
+  line-height: 34rpx;
+  display: inline-block;
+  border-radius: 20rpx;
+}
+.list .listItem .listItem-bottom .footer{
+  border-top: 1rpx solid #e4e4e4;
+  height: 49rpx;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.list .listItem .listItem-bottom .footer .userLike{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100%;
+  /* width: 100rpx; */
+  /* max-width: 120rpx; */
+}
+.list .listItem .listItem-bottom .footer .userLike .icon{
+  width: 30rpx;
+  height: 27rpx;
+  background-image: url(https://clarins.beats-digital.com/wxapp/images/grassSharing/icon_like.png?sign=b4e247ea42fcedbb86f6a98b2dc4b301&t=1550720120);
+  margin-right: 8rpx;
+}
+.list .listItem .listItem-bottom .footer .userLike.active .icon{
+  background-image: url(https://clarins.beats-digital.com/wxapp/images/grassSharing/icon_like_d.png?sign=56595aa1f975f875f38692d4c38de169&t=1550726889);
+}
+.list .listItem .listItem-bottom .footer  .num{
+  color: #161616;
+  font-size: 20rpx;
+}
+.list .listItem .listItem-bottom .footer .userRead{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  /* width: 100rpx; */
+  /* max-width: 120rpx; */
+}
+.list .listItem .listItem-bottom .footer .userRead .icon{
+  width: 30rpx;
+  height: 20rpx;
+  background-image: url(https://clarins.beats-digital.com/wxapp/images/grassSharing/icon_read.png?sign=c25e8271154093b57497401608d830a8&t=1550727197);
+  margin-right: 8rpx;
+}
+.list .listItem .listItem-bottom .footer .userShare {
+  width: 33rpx;
+  height: 33rpx;
+  padding: 0;
+  border:none;
+  background-color: transparent;
+  background-image: url(https://clarins.beats-digital.com/wxapp/images/grassSharing/icon_share.png?sign=da01cb03b0bce3b0caaa27acc22e09b8&t=1550726745);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-origin: padding-box;
+  background-clip: padding-box;
+}
+.list .listItem .listItem-bottom .footer .userShare::after{ 
+  border: none; 
+} 
+
+.list .listItem.active{
+  height: auto;
+  width: 49%;
+  flex-direction: column;
+}
+.list .listItem.active .listItem-top {
+  height: 400rpx;
+  width: 100%;
+}
+.list .listItem.active .listItem-bottom{
+  height: auto;
+  width: auto;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+/* 加载更多 */
+.loading-more{
+  height: 52rpx;
+  width:52rpx;
+  margin: 50rpx auto;
+  background-image: url(https://clarins.beats-digital.com/wxapp/images/common/loading.gif?sign=da01cb03b0bce3b0caaa27acc22e09b8&t=1550726743);
+}
+.loading-more.active{
+  width: 100%;
+  height: auto;
+  background-image:none;
+  font-size: 22rpx;
+  color: #a9a9a9;
+  text-align: center;
+}
+/**
+   css media 适配
+*/
+
+/** iphone系列 */
+
+@media screen and (width:320px), screen and (width:375px), screen and (width:414px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓系列 */
+
+@media screen and (width:360px), screen and (width:393px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓 15:9 */
+
+@media screen and (width:360px) and (max-height:540px) {
+  .cssMedia {
+  }
+}
+
+/** 安卓 18:9 */
+
+@media screen and (width:360px) and (min-height:600px),
+       screen and (width:412px) and (min-height:680px),
+       screen and (width:393px) {
+  .cssMedia {
+  }
+}
+
+/** iphoneX */
+
+@media screen and (width:375px) and (min-height:724px),
+       screen and (width:414px) and (min-height:808px) {
+  .cssMedia {
+  }
+
+  .content {
+    width: 100%;
+    height: calc(100% - 210rpx);
+  }
+}
